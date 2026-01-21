@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Supermercados Carrefour Concepción",
+    "address": "Av. Arturo Prat 480, Concepción",
+    "phone": "+56 41 2680 000",
+    "website": "https://www.carrefour.cl",
+    "image": "carrefour-concepcion.jpg",
+    "membershipLevel": 3,
+    "levelName": "Gold",
+    "description": "Leading retail and supermarket chain serving the Bío Bío Region with quality products and services",
+    "founded": "1998"
+  },
+  {
+    "id": 2,
+    "name": "Inmobiliaria Nueva Concepción",
+    "address": "Calle Ongolmo 567, Concepción",
+    "phone": "+56 41 2725 140",
+    "website": "https://www.inmoconcepcion.cl",
+    "image": "inmobiliaria-nueva.jpg",
+    "membershipLevel": 2,
+    "levelName": "Silver",
+    "description": "Real estate development and property management specializing in residential and commercial projects",
+    "founded": "2002"
+  },
+  {
+    "id": 3,
+    "name": "Hotel Concepción de Antaño",
+    "address": "Av. Pedro de Valdivia 280, Concepción",
+    "phone": "+56 41 2248 080",
+    "website": "https://www.hotelconcepcionaldenano.cl",
+    "image": "hotel-antano.jpg",
+    "membershipLevel": 3,
+    "levelName": "Gold",
+    "description": "Boutique hotel offering luxury accommodation with views of the Bío Bío River and historic charm",
+    "founded": "2005"
+  },
+  {
+    "id": 4,
+    "name": "BioBío Consultoría Empresarial",
+    "address": "Barrio Universitario 341, Concepción",
+    "phone": "+56 41 2660 520",
+    "website": "https://www.biobioconsultoria.cl",
+    "image": "biobio-consultoria.jpg",
+    "membershipLevel": 1,
+    "levelName": "Member",
+    "description": "Business consulting and strategic planning services for growing companies in the region",
+    "founded": "2010"
+  },
+  {
+    "id": 5,
+    "name": "Café Concepción Artesanal",
+    "address": "Calle Barros Arana 654, Concepción",
+    "phone": "+56 41 2259 781",
+    "website": "https://www.cafeconcepcional.cl",
+    "image": "cafe-artesanal.jpg",
+    "membershipLevel": 2,
+    "levelName": "Silver",
+    "description": "Specialty coffee roastery and café showcasing premium beans from Chilean and international sources",
+    "founded": "2012"
+  },
+  {
+    "id": 6,
+    "name": "Artesanías del Bío Bío",
+    "address": "Av. Roosevelt 789, Concepción",
+    "phone": "+56 41 2241 563",
+    "website": "https://www.artesaniasbioio.cl",
+    "image": "artesanias-biobio.jpg",
+    "membershipLevel": 2,
+    "levelName": "Silver",
+    "description": "Cooperative of local artisans producing handcrafted ceramics, textiles, and traditional Chilean crafts",
+    "founded": "2008"
+  },
+  {
+    "id": 7,
+    "name": "TechBío Soluciones Digitales",
+    "address": "Parque Tecnológico Concepción 245, Concepción",
+    "phone": "+56 41 2670 890",
+    "website": "https://www.techbio.cl",
+    "image": "techbio-soluciones.jpg",
+    "membershipLevel": 3,
+    "levelName": "Gold",
+    "description": "Leading software development and digital transformation solutions for regional and national businesses",
+    "founded": "2015"
+  },
+  {
+    "id": 8,
+    "name": "Restaurant Machalí",
+    "address": "Av. Colón 432, Concepción",
+    "phone": "+56 41 2272 456",
+    "website": "https://www.restaurantmachali.cl",
+    "image": "restaurant-machali.jpg",
+    "membershipLevel": 1,
+    "levelName": "Member",
+    "description": "Traditional Chilean cuisine restaurant featuring fresh local seafood and regional specialties",
+    "founded": "2006"
+  }
+]
