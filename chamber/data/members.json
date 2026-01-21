@@ -1,15 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Supermercados Carrefour Concepción",
-    "address": "Av. Arturo Prat 480, Concepción",
-    "phone": "+56 41 2680 000",
-    "website": "https://www.carrefour.cl",
-    "image": "carrefour-concepcion.jpg",
+    "name": "Casa Marisio Concepción",
+    "address": "Barros Arana 605, Concepción",
+    "phone": "(41) 222 3211",
+    "website": "https://www.casamarisio.cl",
+    "image": "casa-marisio.svg",
     "membershipLevel": 3,
     "levelName": "Gold",
-    "description": "Leading retail and supermarket chain serving the Bío Bío Region with quality products and services",
-    "founded": "1998"
+    "description": "Fine jewelry, wedding rings, engagement rings, jewelry and watchmaking workshop."
   },
   {
     "id": 2,
