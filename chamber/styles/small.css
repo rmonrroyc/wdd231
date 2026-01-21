@@ -205,9 +205,12 @@ main.container h1 {
 
 .member-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  background-color: #f9f9f9;
+  padding: 1rem;
 }
 
 .member-info {
@@ -288,9 +291,13 @@ main.container h1 {
 }
 
 #members-container.list-view .member-image {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   flex-shrink: 0;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f9f9f9;
+  padding: 1rem;
 }
 
 #members-container.list-view .member-info {
