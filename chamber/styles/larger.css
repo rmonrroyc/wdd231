@@ -48,7 +48,7 @@
 
   /* Main content */
   .page-container {
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
   }
 
   /* Members Grid */
@@ -58,6 +58,7 @@
 
   /* Footer */
   .footer-container {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -80,7 +81,7 @@
   }
 
   .page-container {
-    padding: 0 3rem;
+    padding: 1.5rem 3rem;
     margin: 3rem auto;
   }
 
@@ -121,7 +122,6 @@
 @media (min-width: 640px) {
 
   .below-hero-grid {
-    display: grid;
     gap: 2rem;
   }
 
@@ -135,7 +135,7 @@
 
   .spotlight-card {
     padding: 1rem;
-    background: #fafafa;
+    background-color: #fafafa;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.25s ease;
@@ -156,6 +156,10 @@
     color: var(--accent-color);
     font-weight: 700;
     text-decoration: underline;
+  }
+
+  .spotlight-link:hover {
+    color: var(--primary-color);
   }
 }
 
@@ -190,7 +194,7 @@
   }
 
   body {
-    background: #ffffff;
+    background-color: #ffffff;
   }
 }
 
