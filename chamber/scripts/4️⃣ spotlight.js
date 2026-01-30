@@ -1,20 +1,14 @@
-// Cargar los miembros desde members.js
-// Asegúrate de que members.js se carga antes de este script en tu HTML
 
 function displayFeaturedMembers() {
   const container = document.getElementById("spotlights-container");
   if (!container) return;
 
-  // Filtrar miembros Gold o Silver
   const filteredMembers = members.filter(m => m.levelName === "Gold" || m.levelName === "Silver");
 
-  // Mezclar aleatoriamente
   const shuffled = filteredMembers.sort(() => 0.5 - Math.random());
 
-  // Tomar 2-3 miembros
   const selected = shuffled.slice(0, 3);
 
-  // Limpiar contenedor
   container.innerHTML = "";
 
   selected.forEach(member => {
@@ -35,5 +29,4 @@ function displayFeaturedMembers() {
   });
 }
 
-// Ejecutar al cargar la página
 document.addEventListener("DOMContentLoaded", displayFeaturedMembers);
