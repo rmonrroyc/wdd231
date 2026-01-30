@@ -1,0 +1,7 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light bulb icon in gold -->
+  <circle cx="60" cy="40" r="18" fill="#b38f00"/>
+  <rect x="55" y="58" width="10" height="12" fill="#b38f00"/>
+  <rect x="50" y="72" width="20" height="3" fill="#b38f00"/>
+  <rect x="48" y="77" width="24" height="3" fill="#b38f00"/>
+</svg>

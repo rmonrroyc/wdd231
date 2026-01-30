@@ -5,116 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Concepción Chamber of Commerce - Business networking, events, and resources for local growth in Chile.">
   <meta name="author" content="Ricardo Monrroy">
-  <title>Business Directory - Concepción Chamber of Commerce</title>
-  
+
+  <title>Business Directory | Concepción Chamber of Commerce</title>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-  <link rel="apple-touch-icon" href="images/logo.svg">
-  
-  <!-- Facebook Meta Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Business Directory - Concepción Chamber of Commerce">
-  <meta property="og:description" content="Explore local businesses and networking opportunities with Concepción Chamber of Commerce. Connect with business owners and grow your network.">
-  <meta property="og:image" content="https://rmonrroyc.github.io/wdd231/chamber/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Concepción Chamber of Commerce">
-  <meta property="og:url" content="https://rmonrroyc.github.io/wdd231/chamber/directory.html">
-  <meta property="og:site_name" content="Concepción Chamber of Commerce">
-  
 
-
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- CSS Files -->
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
-  
-  <!-- JavaScript Files -->
+
+  <!-- JS -->
   <script src="../scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
   <script src="scripts/members.js" defer></script>
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <div class="logo-section">
-        <img src="images/logo.webp" alt="Concepción Chamber of Commerce Logo" class="logo">
-        <div class="site-info">
-          <h2>Concepción Chamber of Commerce</h2>
-          <p class="tagline">Driving Local Business Growth</p>
-        </div>
+
+<!-- ================= HEADER (MISMO QUE INDEX) ================= -->
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo-section">
+      <img src="images/logo.webp" alt="Concepción Chamber of Commerce Logo" class="logo">
+      <div class="site-info">
+        <h1>Concepción Chamber of Commerce</h1>
+        <p class="tagline">Driving Local Business Growth</p>
       </div>
-      <button class="menu-button" aria-label="Toggle Navigation">☰</button>
     </div>
-  </header>
 
-  <!-- Navigation -->
-  <nav class="primary-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html" class="active">Business Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+    <button class="menu-button" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+  </div>
+</header>
 
-  <!-- Main Content -->
-  <main class="container">
-    <h1>Business Directory</h1>
-    
-    <section class="members-section">
-      <h2>Chamber Members</h2>
-      <div class="members-controls">
-        <div class="view-toggle">
-          <button class="view-btn active" id="grid-view-btn">🔲 Grid View</button>
-          <button class="view-btn" id="list-view-btn">📋 List View</button>
-        </div>
+<nav class="primary-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="directory.html" class="active" aria-current="page">Business Directory</a></li>
+    <li><a href="join.html">Join</a></li>
+  </ul>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<main class="container">
+  <h2>Business Directory</h2>
+
+  <section class="members-section">
+    <h3>Chamber Members</h3>
+
+    <div class="members-controls">
+      <div class="view-toggle" role="group" aria-label="View options">
+        <button
+          id="grid-view-btn"
+          class="view-btn active"
+          aria-pressed="true">
+          Grid View
+        </button>
+
+        <button
+          id="list-view-btn"
+          class="view-btn"
+          aria-pressed="false">
+          List View
+        </button>
       </div>
-      
-      <div id="members-container" class="grid-view">
-        <!-- Members will be loaded here by JavaScript -->
-      </div>
+    </div>
+
+    <div id="members-container" class="grid-view">
+      <!-- JS injects members -->
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-container">
+
+    <section class="footer-section">
+      <h3>Concepción Chamber of Commerce</h3>
+      <p>Supporting local businesses and fostering community growth in Concepción and the Bío Bío Region.</p>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Concepción Chamber of Commerce</h3>
-        <p>Supporting local businesses and fostering community growth in Concepción and the Bío Bío Region.</p>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html">Business Directory</a></li>
-          <li><a href="join.html">Join</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <ul class="social-links">
-          <li><a href="https://facebook.com/concepcion-chamber" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li><a href="https://twitter.com/concepcion-chamber" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-          <li><a href="https://linkedin.com/company/concepcion-chamber" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> Concepción Chamber of Commerce. All rights reserved.</p>
-      <p class="last-updated">Last Updated: <span id="last-modified"></span></p>
-    </div>
-  </footer>
+    <section class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h3>Follow Us</h3>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Concepción Chamber of Commerce</p>
+    <p>Last Updated: <span id="last-modified"></span></p>
+  </div>
+</footer>
+
 </body>
 </html>

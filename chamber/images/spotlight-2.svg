@@ -1,0 +1,12 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Building/Shop icon in gold -->
+  <rect x="30" y="25" width="60" height="60" fill="#b38f00"/>
+  <rect x="38" y="33" width="12" height="12" fill="white"/>
+  <rect x="54" y="33" width="12" height="12" fill="white"/>
+  <rect x="70" y="33" width="12" height="12" fill="white"/>
+  <rect x="38" y="50" width="12" height="12" fill="white"/>
+  <rect x="54" y="50" width="12" height="12" fill="white"/>
+  <rect x="70" y="50" width="12" height="12" fill="white"/>
+  <rect x="46" y="65" width="14" height="20" fill="#b38f00"/>
+  <rect x="50" y="72" width="6" height="8" fill="white"/>
+</svg>

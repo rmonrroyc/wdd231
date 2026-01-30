@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Concepción Chamber of Commerce - Business networking, events, and resources for local growth in Chile.">
+  <meta name="author" content="Ricardo Monrroy">
+  <title>Home - Concepción Chamber of Commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Concepción Chamber of Commerce">
+  <meta property="og:description" content="Join the Concepción Chamber of Commerce for business networking, events, and growth opportunities in Chile's Bío Bío Region.">
+  <meta property="og:image" content="https://rmonrroyc.github.io/wdd231/chamber/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Concepción Chamber of Commerce">
+  <meta property="og:url" content="https://rmonrroyc.github.io/wdd231/chamber/index.html">
+  <meta property="og:site_name" content="Concepción Chamber of Commerce">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS -->
+  <script src="../scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/events.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo-section">
+      <img src="images/logo.webp" alt="Concepción Chamber of Commerce Logo" class="logo">
+      <div class="site-info">
+        <h2>Concepción Chamber of Commerce</h2>
+        <p class="tagline">Driving Local Business Growth</p>
+      </div>
+    </div>
+
+    <button class="menu-button" aria-label="Toggle Navigation">☰</button>
+
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero-banner">
+    <img 
+      src="images/hero-banner.webp" 
+      alt="Concepción cityscape and business district" 
+      class="hero-image"
+    >
+
+    <div class="hero-overlay">
+      <h1 class="hero-title">Welcome to Concepción Chamber of Commerce</h1>
+      <p>Connect, Grow, and Thrive in the Bío Bío Region</p>
+      <a href="join.html" class="cta-button">Join the Chamber of Commerce</a>
+    </div>
+
+    <!-- WEATHER -->
+    <div class="hero-widgets">
+      <div class="weather-card" aria-label="Current weather">
+        <div class="weather-inner">
+          <span class="weather-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 15a4 4 0 0 1 4-4h.26A6 6 0 1 1 21 14.26"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="8" cy="6" r="2"
+                      stroke="currentColor" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+
+          <div class="weather-text">
+            <h2>Current Weather</h2>
+            <div id="weather-container" class="weather-info">
+              <p>Loading weather information...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BELOW HERO -->
+  <section class="below-hero-grid">
+
+    <!-- EVENTS -->
+    <section class="events-section card">
+      <h2>Upcoming Events</h2>
+      <div id="events-container" class="events-list">
+        <p>Loading events...</p>
+      </div>
+      <a href="discover.html" class="btn-secondary">View All Events</a>
+    </section>
+
+    <!-- SPOTLIGHTS -->
+    <aside class="spotlights-section card">
+      <h2>Featured Members</h2>
+
+      <div class="spotlights-container">
+
+        <article class="spotlight-card">
+          <img src="images/spotlight-1.svg" alt="Featured business spotlight" class="spotlight-image">
+          <div class="spotlight-content">
+            <h3>Local Innovation Hub</h3>
+            <p>Driving technological advancement and entrepreneurship in the region.</p>
+            <a href="directory.html" class="spotlight-link">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <img src="images/spotlight-2.svg" alt="Featured business spotlight" class="spotlight-image">
+          <div class="spotlight-content">
+            <h3>Regional Trade Center</h3>
+            <p>Facilitating commerce and partnerships across the Bío Bío Region.</p>
+            <a href="directory.html" class="spotlight-link">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <img src="images/spotlight-3.svg" alt="Featured business spotlight" class="spotlight-image">
+          <div class="spotlight-content">
+            <h3>Community Business Network</h3>
+            <p>Building strong relationships between local enterprises.</p>
+            <a href="directory.html" class="spotlight-link">Learn More →</a>
+          </div>
+        </article>
+
+      </div>
+    </aside>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Concepción Chamber of Commerce</h3>
+      <p>Supporting local businesses and fostering community growth.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul class="social-links">
+        <li><a href="#" rel="noopener">Facebook</a></li>
+        <li><a href="#" rel="noopener">Twitter</a></li>
+        <li><a href="#" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Concepción Chamber of Commerce. All rights reserved.</p>
+    <p class="last-updated">Last Updated: <span id="last-modified"></span></p>
+  </div>
+</footer>
+
+</body>
+</html>
