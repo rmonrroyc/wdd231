@@ -82,7 +82,7 @@
 
     <!-- WEATHER -->
     <div class="hero-widgets">
-      <div class="weather-card" aria-labelledby="Current Weather">
+      <div class="weather-card" role="region" aria-labelledby="weather-title">
         <div class="weather-inner">
           <span class="weather-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -97,7 +97,7 @@
           </span>
 
           <div class="weather-text">
-            <h2>Current Weather</h2>
+            <h2 id="weather-title">Current Weather</h2>
             <div id="weather-container" class="weather-info">
               <p>Loading weather information...</p>
             </div>
