@@ -1,112 +1,65 @@
-/* Timbuktu Chamber of Commerce - Members Display Script (Accessible Version) */
+/* Timbuktu Chamber of Commerce - Featured Members Display Script */
 
 // DOM Elements
-const membersContainer = document.getElementById('members-container');
-const gridViewBtn = document.getElementById('grid-view-btn');
-const listViewBtn = document.getElementById('list-view-btn');
+const spotlightsContainer = document.getElementById('spotlights-container');
 
-// State
-let members = [];
-let currentView = 'grid';
+// Number of members to show
+const FEATURED_COUNT = 3;
 
-/**
- * Fetch members data from JSON file
- */
-async function loadMembers() {
+// Load members from JSON and display featured members
+async function loadFeaturedMembers() {
   try {
-    membersContainer.innerHTML =
-      '<p class="loading">Loading member directory...</p>';
+    spotlightsContainer.innerHTML = '<p>Loading members...</p>';
 
+    // Fetch members JSON
     const response = await fetch('data/members.json');
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    const members = await response.json();
+
+    // Filter Gold (3) and Silver (2) members
+    const filteredMembers = members.filter(member => member.membershipLevel >= 2);
+
+    if (filteredMembers.length === 0) {
+      spotlightsContainer.innerHTML = '<p>No featured members found.</p>';
+      return;
     }
 
-    members = await response.json();
+    // Shuffle array for randomness
+    const shuffled = filteredMembers.sort(() => 0.5 - Math.random());
 
-    // Sort by membership level (Gold → Silver → Member)
-    members.sort((a, b) => b.membershipLevel - a.membershipLevel);
+    // Take first FEATURED_COUNT members
+    const featured = shuffled.slice(0, FEATURED_COUNT);
 
-    displayMembers();
-    attachEventListeners();
+    // Create HTML
+    spotlightsContainer.innerHTML = featured
+      .map(member => `
+        <article class="spotlight-card">
+          <img src="images/${member.image}" 
+               alt="${member.name} logo" 
+               class="spotlight-image" 
+               onerror="this.src='images/placeholder.jpg'">
+
+          <h3>${member.name}</h3>
+          <p>${member.description}</p>
+          <a href="${member.website}" target="_blank" rel="noopener noreferrer" class="spotlight-link">
+            Visit Website →
+          </a>
+          <span class="member-level ${getLevelClass(member.membershipLevel)}">
+            ${member.levelName} Member
+          </span>
+        </article>
+      `)
+      .join('');
+
   } catch (error) {
-    console.error('Error loading members:', error);
-    membersContainer.innerHTML = `
+    console.error('Error loading featured members:', error);
+    spotlightsContainer.innerHTML = `
       <div class="error">
         <p>Error loading member directory. Please refresh the page.</p>
       </div>
     `;
   }
-}
-
-/**
- * Display members based on current view
- */
-function displayMembers() {
-  if (members.length === 0) {
-    membersContainer.innerHTML = '<p>No members found.</p>';
-    return;
-  }
-
-  membersContainer.className = `${currentView}-view`;
-  membersContainer.innerHTML = members
-    .map(member => createMemberCard(member))
-    .join('');
-}
-
-/**
- * Create HTML for a single member card
- */
-function createMemberCard(member) {
-  const levelClass = `level-${getLevelClass(member.membershipLevel)}`;
-
-  return `
-    <article class="member-card" data-member-id="${member.id}">
-      <img
-        src="images/${member.image}"
-        alt="${member.name} logo"
-        class="member-image"
-        onerror="this.src='images/placeholder.jpg'"
-      >
-
-      <div class="member-info">
-        <h3 class="member-name">${member.name}</h3>
-
-        <p class="member-detail">
-          <strong>Address:</strong> ${member.address}
-        </p>
-
-        <p class="member-detail">
-          <strong>Phone:</strong>
-          <a href="tel:${member.phone}" class="member-phone">
-            ${member.phone}
-          </a>
-        </p>
-
-        <p class="member-detail">
-          <strong>Founded:</strong> ${member.founded}
-        </p>
-
-        <p class="member-description">
-          ${member.description}
-        </p>
-
-        <span class="member-level ${levelClass}">
-          ${member.levelName} Member
-        </span>
-
-        <a
-          href="${member.website}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="member-website"
-        >
-          Visit Website →
-        </a>
-      </div>
-    </article>
-  `;
 }
 
 /**
@@ -120,28 +73,5 @@ function getLevelClass(level) {
   }[level] || 'member';
 }
 
-/**
- * Attach event listeners
- */
-function attachEventListeners() {
-  gridViewBtn.addEventListener('click', () => switchView('grid'));
-  listViewBtn.addEventListener('click', () => switchView('list'));
-}
-
-/**
- * Switch between grid and list views
- */
-function switchView(viewType) {
-  currentView = viewType;
-
-  gridViewBtn.classList.toggle('active', viewType === 'grid');
-  listViewBtn.classList.toggle('active', viewType === 'list');
-
-  gridViewBtn.setAttribute('aria-pressed', viewType === 'grid');
-  listViewBtn.setAttribute('aria-pressed', viewType === 'list');
-
-  displayMembers();
-}
-
 // Initialize
-document.addEventListener('DOMContentLoaded', loadMembers);
+document.addEventListener('DOMContentLoaded', loadFeaturedMembers);

@@ -142,6 +142,7 @@ header {
   transform: translateX(-50%);
   text-align: center;
   color: #ffffff;
+  z-index: 2;
 }
 
 .hero-title {
@@ -160,16 +161,45 @@ header {
 }
 
 /* ===== WEATHER ===== */
+.hero-widgets {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 3;
+}
+
 .weather-card {
-  background: rgba(0, 0, 0, 0.55);
-  color: #ffffff;
-  padding: 0.5rem;
+  display: block !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  bottom: 1rem !important;
+  left: 1rem !important;
+  background: rgba(0,0,0,0.7) !important;
+  color: white !important;
+  z-index: 9999 !important;
+  padding: 1rem !important;
   border-radius: 6px;
+  max-width: 200px;
 }
 
 .weather-card h2 {
   font-size: 0.8rem;
+  margin-bottom: 0.25rem;
   color: #ffffff;
+}
+
+.weather-forecast {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.forecast-day {
+  background: rgba(255,255,255,0.1);
+  padding: 0.3rem;
+  border-radius: 4px;
 }
 
 /* ===== BELOW HERO ===== */
@@ -224,9 +254,10 @@ header {
 
 .spotlight-card {
   padding: 0.75rem;
+  text-align: center;
 }
 
-.spotlight-content h3 {
+.spotlight-card h3 {
   color: var(--primary-color);
 }
 
@@ -238,6 +269,15 @@ header {
 
 .spotlight-link:hover {
   color: var(--primary-color);
+}
+
+.spotlight-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  border-radius: 50%;
 }
 
 /* ===== FOOTER ===== */

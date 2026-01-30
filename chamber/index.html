@@ -3,25 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Home – Concepción Chamber of Commerce</title>
-
-  <meta name="description"
-        content="Concepción Chamber of Commerce connects businesses, promotes events, and supports local economic growth in Chile’s Bío Bío Region.">
+  <meta name="description" content="Concepción Chamber of Commerce connects businesses, promotes events, and supports local economic growth in Chile’s Bío Bío Region.">
   <meta name="author" content="Ricardo Monrroy">
 
-  <!-- OPEN GRAPH (VALIDATOR SAFE) -->
   <!-- OPEN GRAPH -->
-<meta property="og:title"
-      content="Concepción Chamber of Commerce – Supporting Local Business Growth">
-
-<meta property="og:description"
-      content="The Concepción Chamber of Commerce connects businesses, promotes events, and supports sustainable economic growth in Chile’s Bío Bío Region.">
-
-<meta property="og:image" content="https://rmonrroyc.github.io/wdd231/chamber/og-image.webp">
-<meta property="og:url" content="https://rmonrroyc.github.io/wdd231/chamber/index.html">
-<meta property="og:type" content="website">
-
+  <meta property="og:title" content="Concepción Chamber of Commerce – Supporting Local Business Growth">
+  <meta property="og:description" content="The Concepción Chamber of Commerce connects businesses, promotes events, and supports sustainable economic growth in Chile’s Bío Bío Region.">
+  <meta property="og:image" content="images/og-image.webp">
+  <meta property="og:url" content="https://rmonrroyc.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
 
   <!-- ICONS -->
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
@@ -36,12 +27,6 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
-
-  <!-- JS -->
-  <script src="../scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/weather.js" defer></script>
-  <script src="scripts/events.js" defer></script>
 </head>
 
 <body>
@@ -49,10 +34,7 @@
 <header>
   <div class="header-container">
     <div class="logo-section">
-      <img src="images/logo.webp"
-           alt="Concepción Chamber of Commerce Logo"
-           class="logo">
-
+      <img src="images/logo.webp" alt="Concepción Chamber of Commerce Logo" class="logo">
       <div class="site-info">
         <h2>Concepción Chamber of Commerce</h2>
         <p class="tagline">Driving Local Business Growth</p>
@@ -76,10 +58,7 @@
 
   <!-- HERO -->
   <section class="hero-banner">
-    <img src="images/hero-banner.webp"
-         alt="Concepción cityscape and business district"
-         class="hero-image">
-
+    <img src="images/hero-banner.webp" alt="Concepción cityscape and business district" class="hero-image">
     <div class="hero-overlay">
       <h1 class="hero-title">Welcome to Concepción Chamber of Commerce</h1>
       <p>Connect, Grow, and Thrive in the Bío Bío Region</p>
@@ -90,8 +69,7 @@
     <div class="hero-widgets">
       <div class="weather-card" role="region" aria-labelledby="weather-title">
         <div class="weather-inner">
-          <span class="weather-icon" aria-hidden="true"></span>
-
+          <span class="weather-icon" aria-hidden="true">☀️</span>
           <div class="weather-text">
             <h2 id="weather-title">Current Weather</h2>
             <div id="weather-container" class="weather-info">
@@ -108,37 +86,16 @@
 
     <section class="events-section content-card">
       <h2>Upcoming Events</h2>
-
       <div id="events-container" class="events-list">
         <p>Loading events...</p>
       </div>
-
       <a href="discover.html" class="button-secondary">View All Events</a>
     </section>
 
     <aside class="spotlights-section content-card">
       <h2>Featured Members</h2>
-
-      <div class="spotlights-container">
-
-        <article class="spotlight-card">
-          <h3>Local Innovation Hub</h3>
-          <p>Driving technological advancement and entrepreneurship in the region.</p>
-          <a href="directory.html" class="spotlight-link">Learn More →</a>
-        </article>
-
-        <article class="spotlight-card">
-          <h3>Regional Trade Center</h3>
-          <p>Facilitating commerce and partnerships across the Bío Bío Region.</p>
-          <a href="directory.html" class="spotlight-link">Learn More →</a>
-        </article>
-
-        <article class="spotlight-card">
-          <h3>Community Business Network</h3>
-          <p>Building strong relationships between local enterprises.</p>
-          <a href="directory.html" class="spotlight-link">Learn More →</a>
-        </article>
-
+      <div id="spotlights-container" class="spotlights-container">
+        <!-- JS injectará miembros aquí -->
       </div>
     </aside>
 
@@ -152,5 +109,12 @@
   </div>
 </footer>
 
+<!-- SCRIPTS -->
+<script src="scripts/members.js"></script>
+<script src="scripts/spotlight.js"></script>
+<script src="scripts/weather.js"></script>
+<script src="scripts/navigation.js"></script>
+<script src="scripts/date.js"></script>
+<script src="scripts/events.js"></script>
 </body>
 </html>

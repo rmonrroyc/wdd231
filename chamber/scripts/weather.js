@@ -1,47 +1,46 @@
 // Weather Section - Concepción, Chile
-// Using Open-Meteo API (free, no API key required)
-
 const weatherContainer = document.getElementById('weather-container');
 
-// Fetch weather data for Concepción, Chile
 async function loadWeather() {
   try {
     const response = await fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=-36.8201&longitude=-73.0554&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&temperature_unit=celsius&wind_speed_unit=kmh'
+      'https://api.open-meteo.com/v1/forecast?latitude=-36.8201&longitude=-73.0554&daily=temperature_2m_max,temperature_2m_min,weathercode&current_weather=true&temperature_unit=celsius&timezone=America/Santiago'
     );
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch weather data');
-    }
-    
+    if (!response.ok) throw new Error('Failed to fetch weather data');
+
     const data = await response.json();
-    const current = data.current;
-    
-    // Interpret weather code
-    const weatherDescription = getWeatherDescription(current.weather_code);
-    
-    // Create weather HTML
-    const weatherHTML = `
+    const current = data.current_weather;
+    const daily = data.daily;
+
+    const currentWeatherHTML = `
       <div class="weather-details">
         <div class="weather-main">
-          <span class="temperature">${current.temperature_2m}°C</span>
-          <span class="description">${weatherDescription}</span>
-        </div>
-        <div class="weather-info">
-          <p><strong>Humidity:</strong> ${current.relative_humidity_2m}%</p>
-          <p><strong>Wind Speed:</strong> ${current.wind_speed_10m} km/h</p>
+          <span class="temperature">${current.temperature}°C</span>
+          <span class="description">${getWeatherDescription(current.weathercode)}</span>
         </div>
       </div>
     `;
-    
-    weatherContainer.innerHTML = weatherHTML;
+
+    let forecastHTML = '<div class="weather-forecast">';
+    for (let i = 0; i < 3; i++) {
+      forecastHTML += `
+        <div class="forecast-day">
+          <p><strong>${daily.time[i]}</strong></p>
+          <p>${getWeatherDescription(daily.weathercode[i])}</p>
+          <p>Min: ${daily.temperature_2m_min[i]}°C | Max: ${daily.temperature_2m_max[i]}°C</p>
+        </div>
+      `;
+    }
+    forecastHTML += '</div>';
+
+    weatherContainer.innerHTML = currentWeatherHTML + forecastHTML;
+
   } catch (error) {
     console.error('Weather fetch error:', error);
     weatherContainer.innerHTML = '<p>Unable to load weather information at this time.</p>';
   }
 }
 
-// WMO Weather interpretation codes
 function getWeatherDescription(code) {
   const weatherCodes = {
     0: 'Clear sky',
@@ -69,9 +68,7 @@ function getWeatherDescription(code) {
     96: 'Thunderstorm with hail',
     99: 'Thunderstorm with hail'
   };
-  
   return weatherCodes[code] || 'Unknown';
 }
 
-// Load weather on page load
 document.addEventListener('DOMContentLoaded', loadWeather);
