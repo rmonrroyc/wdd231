@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join – Concepción Chamber of Commerce</title>
+
+  <meta name="description" content="Join the Concepción Chamber of Commerce and grow your business in the Bío Bío Region.">
+  <meta name="author" content="Ricardo Monrroy">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo-section">
+      <img src="images/logo.webp" alt="Concepción Chamber of Commerce Logo" class="logo">
+      <div class="site-info">
+        <h2>Concepción Chamber of Commerce</h2>
+        <p class="tagline">Driving Local Business Growth</p>
+      </div>
+    </div>
+
+    <button class="menu-button" aria-label="Toggle Navigation">☰</button>
+
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html" class="nav-active" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="join-page">
+
+  <h1>Join the Chamber of Commerce</h1>
+
+  <div class="join-container">
+
+    <!-- ===== FORM SECTION ===== -->
+    <section class="join-form-section">
+      <form method="get" action="thankyou.html">
+
+        <fieldset>
+          <legend>Applicant Information</legend>
+
+          <label>
+            First Name
+            <input type="text" name="fname" title="First Name" required autocomplete="given-name">
+          </label>
+
+          <label>
+            Last Name
+            <input type="text" name="lname" title="Last Name" required autocomplete="family-name">
+          </label>
+
+          <label>
+            Organizational Title
+            <input
+              type="text"
+              name="orgtitle"
+              title="Organizational Title"
+              autocomplete="organization-title"
+              pattern="[A-Za-z\\s\\-]{7,}">
+          </label>
+
+          <label>
+            Email Address
+            <input
+              type="email"
+              name="email"
+              title="Email Address"
+              placeholder="example@email.com"
+              required
+              autocomplete="email">
+          </label>
+
+          <label>
+            Mobile Phone
+            <input
+              type="tel"
+              name="phone"
+              title="Mobile Phone"
+              required
+              autocomplete="tel">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Organization Information</legend>
+
+          <label>
+            Organization Name
+            <input
+              type="text"
+              name="organization"
+              title="Organization Name"
+              required
+              autocomplete="organization">
+          </label>
+
+          <label>
+            Membership Level
+            <select name="membership" title="Membership Level" required>
+              <option value="">Select a membership level</option>
+              <option value="np">NP Membership</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>
+            Organization Description
+            <textarea
+              name="description"
+              title="Organization Description"></textarea>
+          </label>
+        </fieldset>
+
+        <!-- TIMESTAMP -->
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" value="Join the Chamber">
+      </form>
+    </section>
+
+    <!-- ===== MEMBERSHIP CARDS ===== -->
+    <aside class="membership-cards">
+
+      <article class="membership-card">
+        <h2>NP Membership</h2>
+        <p>Non-profit organizations. No membership fee.</p>
+        <a href="#" data-modal="npModal">Learn more</a>
+      </article>
+
+      <article class="membership-card">
+        <h2>Bronze Membership</h2>
+        <p>Basic exposure and event access.</p>
+        <a href="#" data-modal="bronzeModal">Learn more</a>
+      </article>
+
+      <article class="membership-card">
+        <h2>Silver Membership</h2>
+        <p>Advertising and training benefits.</p>
+        <a href="#" data-modal="silverModal">Learn more</a>
+      </article>
+
+      <article class="membership-card">
+        <h2>Gold Membership</h2>
+        <p>Premium exposure and spotlight opportunities.</p>
+        <a href="#" data-modal="goldModal">Learn more</a>
+      </article>
+
+    </aside>
+  </div>
+
+</main>
+
+<!-- ===== NP MODAL ===== -->
+<dialog id="npModal" class="membership-modal">
+  <h3>🌱 NP Membership Benefits</h3>
+
+  <div class="modal-grid">
+    <div class="modal-card">
+      <span class="modal-icon">🤝</span>
+      <p>Networking opportunities</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">📅</span>
+      <p>Participation in community events</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">💸</span>
+      <p>No membership fee</p>
+    </div>
+  </div>
+
+  <button class="modal-close">Close</button>
+</dialog>
+
+
+<!-- ===== BRONZE MODAL ===== -->
+<dialog id="bronzeModal" class="membership-modal">
+  <h3>🥉 Bronze Membership Benefits</h3>
+
+  <div class="modal-grid">
+    <div class="modal-card">
+      <span class="modal-icon">📂</span>
+      <p>Business directory listing</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">🎟️</span>
+      <p>Event discounts</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">📬</span>
+      <p>Monthly newsletter access</p>
+    </div>
+  </div>
+
+  <button class="modal-close">Close</button>
+</dialog>
+
+
+<!-- ===== SILVER MODAL ===== -->
+<dialog id="silverModal" class="membership-modal">
+  <h3>🥈 Silver Membership Benefits</h3>
+
+  <div class="modal-grid">
+    <div class="modal-card">
+      <span class="modal-icon">📢</span>
+      <p>Advertising opportunities</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">🎓</span>
+      <p>Training sessions</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">⭐</span>
+      <p>Priority promotions</p>
+    </div>
+  </div>
+
+  <button class="modal-close">Close</button>
+</dialog>
+
+
+<!-- ===== GOLD MODAL ===== -->
+<dialog id="goldModal" class="membership-modal">
+  <h3>🥇 Gold Membership Benefits</h3>
+
+  <div class="modal-grid">
+    <div class="modal-card">
+      <span class="modal-icon">🏆</span>
+      <p>Homepage spotlight feature</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">📈</span>
+      <p>Premium advertising</p>
+    </div>
+    <div class="modal-card">
+      <span class="modal-icon">🥂</span>
+      <p>VIP networking events</p>
+    </div>
+  </div>
+
+  <button class="modal-close">Close</button>
+</dialog>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; <span id="year"></span> Concepción Chamber of Commerce</p>
+    <p>Last Updated: <span id="last-modified"></span></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("timestamp").value = new Date().toLocaleString();
+
+  document.querySelectorAll("[data-modal]").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.getElementById(link.dataset.modal).showModal();
+    });
+  });
+
+  document.querySelectorAll("dialog button").forEach(btn => {
+    btn.addEventListener("click", () => btn.closest("dialog").close());
+  });
+</script>
+
+</body>
+</html>

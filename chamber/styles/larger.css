@@ -213,3 +213,65 @@
   }
 }
 
+/* =====================================================
+   JOIN PAGE – DESKTOP LAYOUT
+   ===================================================== */
+
+@media (min-width: 640px) {
+
+  .join-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .join-form-section form {
+    padding: 2rem;
+  }
+
+  .membership-cards {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .join-container {
+    gap: 3rem;
+  }
+
+  .join-page h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  legend {
+    font-size: 1.1rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .membership-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .membership-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
