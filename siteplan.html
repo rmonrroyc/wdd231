@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Individual Project Site Plan – One Page Web Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ricardo Ignacio Monrroy Cerna">
+
+  <style>
+    /* Color Scheme */
+    :root {
+      --primary-color: #123f56;
+      --secondary-color: #ec9018;
+      --background-color: #f5f7f8;
+      --text-color: #1a1a1a;
+    }
+
+    /* Typography */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: var(--primary-color);
+    }
+
+    h1 {
+      border-bottom: 4px solid var(--secondary-color);
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .accent {
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    /* Wireframes with images */
+    .wireframes article {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .wireframes figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .wireframes img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid var(--primary-color);
+      background-color: #ffffff;
+    }
+
+    .wireframes figcaption {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    .wireframe-text h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+
+    @media (min-width: 768px) {
+      .wireframes article {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .wireframes figure,
+      .wireframe-text {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Individual Project Site Plan</h1>
+    <p><span class="accent">Project:</span> One Page Web Studio</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>One Page Web Studio</strong></p>
+      <p>
+        This name was selected because it clearly communicates the main focus of
+        the website: designing and building one-page websites. The name is
+        simple, descriptive, and easy to remember, which supports branding and
+        recognition.
+      </p>
+      <p><em>Optional domain availability:</em> onepagewebstudio.com</p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>
+        The purpose of this website is to present a web design studio that
+        specializes in creating one-page websites for small businesses,
+        entrepreneurs, and independent professionals. The site will provide
+        information about one-page websites, describe available services,
+        showcase website features or packages, and allow visitors to contact the
+        studio through an online form.
+      </p>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>What is a one-page website and is it a good option for my small business?</li>
+        <li>What services or website packages are available and how can I request one?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Color Scheme</h2>
+      <ul>
+        <li><strong>Primary Color (#123f56):</strong> Used for headings, navigation elements, and primary branding areas.</li>
+        <li><strong>Secondary Color (#ec9018):</strong> Used for accents, buttons, highlights, and calls to action.</li>
+        <li><strong>Background Color (#f5f7f8):</strong> Used as the main page background to maintain readability and contrast.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <ul>
+        <li><strong>Arial / Helvetica / sans-serif:</strong> Used for all body text and general content to ensure readability and accessibility.</li>
+        <li><strong>Font-weight variations:</strong> Used for headings and emphasis to create visual hierarchy.</li>
+      </ul>
+    </section>
+
+    <!-- WIREFRAMES WITH IMAGES -->
+    <section class="wireframes">
+      <h2>Wireframes</h2>
+
+      <article>
+        <figure>
+          <img
+            src="images/wireframe-mobile.png"
+            alt="Mobile wireframe showing header, navigation, hero section, content blocks, call to action, and footer"
+            loading="lazy"
+            width="600"
+            height="600"
+          >
+          <figcaption>Mobile Home Page Wireframe</figcaption>
+        </figure>
+
+        <div class="wireframe-text">
+          <h3>Mobile View</h3>
+          <p>
+            This wireframe represents the mobile-first layout of the home page.
+            Content is stacked vertically to support scrolling and usability on
+            small screens.
+          </p>
+          <p>
+            The layout includes a header with navigation, a hero section, service
+            information, a call-to-action area, and footer content.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <figure>
+          <img
+            src="images/wireframe-desktop.png"
+            alt="Desktop wireframe showing horizontal navigation, hero section, content columns, services grid, and footer"
+            loading="lazy"
+            width="600"
+            height="600"
+          >
+          <figcaption>Desktop / Tablet Home Page Wireframe</figcaption>
+        </figure>
+
+        <div class="wireframe-text">
+          <h3>Desktop / Tablet View</h3>
+          <p>
+            This wireframe illustrates the layout for larger screens, where
+            content is displayed using wider sections and multi-column designs.
+          </p>
+          <p>
+            It includes horizontal navigation, a prominent hero section,
+            structured content areas, service grids, and a footer for navigation
+            and additional information.
+          </p>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 One Page Web Studio – Site Plan Document</p>
+  </footer>
+
+</body>
+</html>
