@@ -308,7 +308,7 @@ footer {
 .footer-section h3 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
-  color: var(--secondary-color);
+  color: var(--white);
 }
 
 .footer-section p {
@@ -716,6 +716,7 @@ dialog button {
 }
 
 /* ===== DISCOVER ===== */
+
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -730,56 +731,65 @@ dialog button {
     "card8";
 }
 
+/* Card */
 .discover-card {
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.discover-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.discover-card {
-  background: #ffffff;
+  background: var(--white);
   padding: 1.2rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Image container */
+.discover-card figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Image */
+.discover-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title */
 .discover-card h2 {
   font-size: 1.2rem;
   color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
+/* Address */
 .discover-card address {
   font-style: normal;
   font-weight: 600;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-light);
   margin: 0.5rem 0;
 }
 
+/* Description */
 .discover-card p {
   font-size: 0.9rem;
   line-height: 1.5;
   flex-grow: 1;
 }
 
+/* Button */
 .discover-card button {
   margin-top: 1rem;
   padding: 0.6rem;
   border: none;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white);
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
@@ -789,6 +799,7 @@ dialog button {
 .discover-card button:hover {
   background-color: var(--secondary-color);
 }
+
 
 
 

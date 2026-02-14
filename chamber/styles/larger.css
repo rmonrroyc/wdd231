@@ -1,6 +1,6 @@
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
 
   .header-container {
     padding: 0 2rem;
@@ -77,7 +77,7 @@
 
 /* ===== DESKTOP ===== */
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
   .header-container {
     padding: 0 3rem;
@@ -108,7 +108,7 @@
 
 /* ===== HERO ADJUSTMENTS ===== */
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
 
   .hero-banner {
     height: 420px;
@@ -137,7 +137,7 @@
 
 /* ===== BELOW HERO GRID ===== */
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
 
   .below-hero-grid {
     gap: 2rem;
@@ -229,7 +229,7 @@
    JOIN PAGE – DESKTOP LAYOUT
    ===================================================== */
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
 
   .join-container {
     display: grid;
@@ -248,7 +248,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
   .join-container {
     gap: 3rem;
@@ -279,12 +279,17 @@
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
   .modal-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* =====================================================
+   DISCOVER PAGE – RESPONSIVE GRID AREAS
+   ===================================================== */
+
+/* ===== MEDIUM (641px - 1024px) ===== */
 @media (min-width: 641px) {
 
   .discover-grid {
@@ -295,8 +300,19 @@
       "card5 card6"
       "card7 card8";
   }
+
+  /* Hover effect only on non-mobile devices */
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
 }
 
+/* ===== LARGE (1025px and above) ===== */
 @media (min-width: 1025px) {
 
   .discover-grid {
@@ -309,18 +325,6 @@
 
 }
 
-
-@media (min-width: 641px) {
-
-  .discover-card img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-
-  .discover-card img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-  }
-}
 
 
 
