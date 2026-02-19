@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Startup Launch",
+    "category": "Business",
+    "price": "899",
+    "description": "Perfect for startups launching a new product.",
+    "image": "images/template1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Restaurant Pro",
+    "category": "Food & Beverage",
+    "price": "799",
+    "description": "Modern layout ideal for restaurants.",
+    "image": "images/template2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Creative Portfolio",
+    "category": "Creative",
+    "price": "699",
+    "description": "Designed for designers and photographers.",
+    "image": "images/template3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Fitness Coach",
+    "category": "Health",
+    "price": "750",
+    "description": "High-energy design for fitness professionals.",
+    "image": "images/template4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tech Agency",
+    "category": "Technology",
+    "price": "950",
+    "description": "Clean and corporate design for tech companies.",
+    "image": "images/template5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Personal Brand",
+    "category": "Influencer",
+    "price": "650",
+    "description": "Build your online presence with style.",
+    "image": "images/template6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Consulting Expert",
+    "category": "Professional",
+    "price": "820",
+    "description": "Professional layout for consultants.",
+    "image": "images/template7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Event Landing",
+    "category": "Events",
+    "price": "$700",
+    "description": "Promote events with impact.",
+    "image": "images/template8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "E-commerce Lite",
+    "category": "Retail",
+    "price": "999",
+    "description": "Simple online store layout.",
+    "image": "images/template9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Educational Hub",
+    "category": "Education",
+    "price": "850",
+    "description": "Great for tutors and schools.",
+    "image": "images/template10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Medical Practice",
+    "category": "Health",
+    "price": "900",
+    "description": "Trustworthy layout for clinics.",
+    "image": "images/template11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Real Estate Focus",
+    "category": "Real Estate",
+    "price": "880",
+    "description": "Designed for realtors and agencies.",
+    "image": "images/template12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Marketing Agency",
+    "category": "Marketing",
+    "price": "920",
+    "description": "Bold layout for digital agencies.",
+    "image": "images/template13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Wedding Planner",
+    "category": "Events",
+    "price": "770",
+    "description": "Elegant design for wedding services.",
+    "image": "images/template14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "App Promotion",
+    "category": "Technology",
+    "price": "890",
+    "description": "Landing page for mobile apps.",
+    "image": "images/template15.jpg"
+  }
+]

@@ -1,0 +1,179 @@
+/* ==========================================
+   LARGER SCREENS (TABLET & DESKTOP)
+   ========================================== */
+
+@media (min-width: 768px) {
+
+    /* ==============================
+       HEADER & NAVIGATION
+    ============================== */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        background: none;
+    }
+
+    .navigation li {
+        border: none;
+    }
+
+    .navigation a {
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        color: #1a1a1a;
+        transition: color 0.3s ease;
+    }
+
+    .navigation a:hover {
+        color: #156f72;
+    }
+
+    .navigation a.active {
+        border-bottom: 2px solid #156f72;
+    }
+
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6rem 4rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
+
+    /* ==============================
+       ABOUT SECTION
+    ============================== */
+
+    .about-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-card {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    width: 250px;
+    z-index: 2;
+  }
+
+
+    /* ==============================
+       FEATURES GRID
+    ============================== */
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+    /* ==============================
+       SERVICES GRID
+    ============================== */
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2.8rem;
+    }
+
+
+    /* ==============================
+       TEMPLATES GRID
+    ============================== */
+
+    .templates-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+    /* ==============================
+       CONTACT PAGE
+    ============================== */
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1;
+    }
+
+
+    /* ==============================
+       ATTRIBUTIONS
+    ============================== */
+
+    .attributions-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 2rem 3rem;
+    }
+
+    .footer-text {
+        text-align: right;
+    }
+
+}
