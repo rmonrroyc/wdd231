@@ -545,3 +545,34 @@ form button:hover {
 .navigation a.active {
   color: var(--secondary-color) !important;
 }
+
+/* ===============================
+   PROJECT VIDEO LINK
+================================= */
+
+.project-video {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.project-video a {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: #ec9018;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.project-video a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Dark mode support */
+body.dark-mode .project-video a {
+    background-color: #156f72;
+    color: white;
+}
