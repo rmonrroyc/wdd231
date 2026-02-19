@@ -21,20 +21,15 @@
 
 <main>
     <section id="results"></section>
+
+    <div class="back-home">
+        <a href="index.html" class="cta-button">⬅ Back to Home</a>
+    </div>
 </main>
 
-<script>
-    const results = document.querySelector("#results");
-    const params = new URLSearchParams(window.location.search);
 
-    results.innerHTML = `
-        <h2>Thank you, ${params.get("fullname")}!</h2>
-        <p><strong>Email:</strong> ${params.get("email")}</p>
-        <p><strong>Business Type:</strong> ${params.get("business")}</p>
-        <p><strong>Budget:</strong> $${params.get("budget")}</p>
-        <p><strong>Project Description:</strong> ${params.get("message")}</p>
-    `;
-</script>
+<script src="scripts/main.js" defer></script>
+
 
 </body>
 </html>

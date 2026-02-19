@@ -119,3 +119,20 @@ if (header) {
 // MODAL INIT
 // ===============================
 initModal();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const results = document.querySelector("#results");
+
+  if (results) {
+    const params = new URLSearchParams(window.location.search);
+
+    results.innerHTML = `
+      <h2>Thank you, ${params.get("fullname") || ""}!</h2>
+      <p><strong>Email:</strong> ${params.get("email") || ""}</p>
+      <p><strong>Business Type:</strong> ${params.get("business") || ""}</p>
+      <p><strong>Budget:</strong> $${params.get("budget") || ""}</p>
+      <p><strong>Project Description:</strong> ${params.get("message") || ""}</p>
+    `;
+  }
+});
+
